@@ -1,12 +1,15 @@
 body{
-	background-color:#D7F2F6;
+	background-color:#F9F9F9;			/*Jin Z*/
+	font-family: 'Cinzel', serif;		/*Jin Z*/
+	
 }
 .center{
-	text-align:center;
+	text-align:center;					/*Jin Z*/
+	margin: auto;						/*Jin Z*/
 }
-.red{
-	color:red;
-}
-.title{
-	font-size: 38px;
+.title{	
+	font-size: 38px;					/*Jin Z*/
+	width: 80%;							/*Jin Z*/
+	background-color: #78D1A5;			/*Jin Z*/
+	
 }
