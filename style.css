@@ -1,12 +1,26 @@
 body{
 	background-color:#F9F9F9;			/*Jin Z*/
 	font-family: 'Cinzel', serif;		/*Jin Z*/
-	
 }
+
+a{
+	color: #0B4B2B;
+	text-decoration: none;
+	margin: 50px;
+}
+
 .center{
-	text-align:center;					/*Jin Z*/
+	text-align: center;					/*Jin Z*/
 	margin: auto;						/*Jin Z*/
 }
+.logo{
+	width: 15%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 .title{	
 	font-size: 38px;					/*Jin Z*/
 	width: 80%;							/*Jin Z*/
