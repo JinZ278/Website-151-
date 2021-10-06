@@ -1,6 +1,8 @@
 body{
+	max-width: 1100px;
 	background-color:#F9F9F9;			/*Jin Z*/
 	font-family: 'Cinzel', serif;		/*Jin Z*/
+	margin: auto;
 }
 
 a{
@@ -9,21 +11,28 @@ a{
 	margin: 50px;
 }
 
+.section2{
+	background-color: #a5d2b9;
+}
+
 .center{
 	text-align: center;					/*Jin Z*/
 	margin: auto;						/*Jin Z*/
 }
+
+.contact{
+	color: #0B4B2B
+}
+
 .logo{
-	width: 15%;
+	width: 25%;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
 
-.title{	
-	font-size: 38px;					/*Jin Z*/
-	width: 80%;							/*Jin Z*/
-	background-color: #78D1A5;			/*Jin Z*/
-	
+.header{
+	width: 100%;
+	height: auto;
 }
