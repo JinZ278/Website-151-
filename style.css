@@ -1,29 +1,39 @@
+
+/*
+=========================================================================================
+Project Name: No Ink No Pen Homepage CSS Sheet
+Project Description: Create CSS Sheet for No Ink No Pen Homepage
+Date: 10/7/2021
+Programmer Name: Suki Chen and Jin Zhang
+=========================================================================================
+*/
+
+/* jz Format background color, width, font type, and margin */
 body{
 	max-width: 1100px;
-	background-color:#F9F9F9;			/*Jin Z*/
-	font-family: 'Cinzel', serif;		/*Jin Z*/
+	background-color:#F9F9F9;			
+	font-family: 'Cinzel', serif;		
 	margin: auto;
 }
 
+/*jz Format background of the page */
 a{
 	color: #0B4B2B;
 	text-decoration: none;
-	margin: 50px;
 }
 
+/*jz Format body of the page */
 .section2{
 	background-color: #a5d2b9;
 }
 
+/*jz Format used to center elements on page */
 .center{
-	text-align: center;					/*Jin Z*/
-	margin: auto;						/*Jin Z*/
+	text-align: center;					
+	margin: auto;						
 }
 
-.contact{
-	color: #0B4B2B
-}
-
+/*jz Format logo size and location on the page */
 .logo{
 	width: 25%;
 	height: auto;
@@ -32,7 +42,15 @@ a{
 	display: block;
 }
 
+/*jz Format the header image on the page */
 .header{
 	width: 100%;
 	height: auto;
+}
+
+/*jz Format the contact information section */
+.footer{
+	color: #0B4B2B;
+	background-color: #a5d2b9;	
+	display: block;
 }
