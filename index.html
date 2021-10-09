@@ -22,70 +22,78 @@ Programmer Name: Suki Chen and Jin Zhang
 
 <body>
 
-<!-- jz Specify class names  for CSS file--> 
+<!-- jz Specify class names for CSS file--> 
 <div class = "section1"> 
+
+	<!-- jz add logo to the center of the page -->
 	<div class = "section2"> 
-<!-- jz add logo to the center of the page -->
 		<img src = "images/logo.png" alt = "Logo" class = "logo">
 	</div>
-<!-- jz Link to other pages on the website and classify the links to have the class attribute center -->
+	
+	<!-- jz Link to other pages on the website and classify the links to have the class attribute center -->
 	<div class = "section3"> 
-		<h2 class = "center" > 
-			<a href = "index.html"> HOME </a>
-			<a href = "about.html"> ABOUT </a>
-			<a href = "pens.html"> PENS </a>
-			<a href = "ink.html"> INK </a>
-			<a href = "search.html"> SEARCH </a>
-			<a href = "cart.html"> CART </a>
-		</h2> 
+		<a href = "index.html" class = "item1"> HOME </a>
+		<a href = "about.html" class = "item1"> ABOUT </a>
+		<a href = "pens.html" class = "item1"> PENS </a>
+		<a href = "ink.html" class = "item1"> INK </a>
+		<a href = "search.html" class = "item1"> SEARCH </a>
+		<a href = "cart.html" class = "item1"> CART </a>
 	</div>
 	
-	<img src = "images/alt_header.png" alt = "Header picture" class = "header">
-
-<!-- sc Insert slogan -->
-	<h1 style = "text-align:center">No pens or inks? We got you! </h1>
+	<!-- jz Header Image -->
+	<div class = "section4">
+		<img src = "images/alt_header.png" alt = "Header picture" class = "header">
+	</div>
+	
+	<!-- sc Slogan and company principles -->
+	<div class = "section5">
+		<h1>No pens or inks? We got you! </h1>
+		<h1> Customize and buy the perfect stationery 4 you! </h1>
+	</div>
 	
 </div>
-<!-- sc Create links to bestselling products -->
-	
-<!-- sc create table to organize the images and header and define class = center to center the table -->
-<table class = "center">
-	<caption style="color:#0B4B2B;"> <h2> Bestsellers </h2> </caption>
-<!-- Insert row to place names above the images -->
-	<tr>
-		<th>Ballpoint pen</th>
-		<th>Fountain pen</th>
-		<th>Ink</th>
-	</tr>
-	<tr>
-<!-- sc Insert images of products (ballpoint and fountain pen and ink) in table to use as a hyperlink (note: we will be updating the links later)-->
-<!-- sc note: all images used are from Canva -->
-		<td><a href ="pens.html"><img src="images/pen.png" alt = "Ballpoint pen" style = "width:250px;height:250px"></a></td>
-		<td><a href ="pens.html"><img src="images/pen 3.png" alt= "Fountain pen" style = "width:250px;height:250px"></a></td>
-		<td><a href ="ink.html"><img src="images/ink.png" alt = "Inks" style = "width:250px;height:250px"></a></td>
-	</tr>
-</table>
-	
-<!-- sc Link to the fountain pens subreddit -->
-	<h2 style = "text-align: center"> Need help deciding what to get?<a href = "https://www.reddit.com/r/pens/">Visit r/pens</a> </h2>
-	
-	
-<!-- sc Create section for contact information with formatting footer -->
-<div class = "footer">
 
-<h3 style="color:#0B4B2B;"> Contact Us</h3>
-<!-- sc Create unordered list for social media pages and other contact information -->
-<ul>
-	<li> Twitter: @NoInkNoPen</li>
-	<li> Instagram: @NoInkNoPen</li>
-	<li> Facebook: @NoInkNoPen</li>
-	<li> Reddit: r/NoInkNoPen</li>
-<!-- sc Link to email-->
-	<li> Email: <a href = "mailto:sc3872@drexel.edu">sc3872@drexel.edu </a></li>
-</ul>	
+
+<!-- jz Creating sections to organize -->
+<div class = "section6">
+
+	<!-- sc create table to organize the images and header and define class = center to center the table -->
+	<table style = "margin: auto">
+		<caption style="color:#0B4B2B;"> <h2> Bestsellers </h2> </caption>
+		<!-- sc Insert row to place names above the images -->
+		<tr>
+			<th>Ballpoint pen</th>
+			<th>Fountain pen</th>
+			<th>Ink</th>
+		</tr>
+		<tr>
+			<!-- sc Insert images of products (ballpoint and fountain pen and ink) in table to use as a hyperlink (note: we will be updating the links later)-->
+			<!-- sc Create links to bestselling products -->
+			<!-- sc note: all images used are from Canva -->
+			<td><a href ="pens.html"><img src="images/pen.png" alt = "Ballpoint pen" style = "width:250px;height:250px"></a></td>
+			<td><a href ="pens.html"><img src="images/pen 3.png" alt= "Fountain pen" style = "width:250px;height:250px"></a></td>
+			<td><a href ="ink.html"><img src="images/ink.png" alt = "Inks" style = "width:250px;height:250px"></a></td>
+		</tr>
+	</table>
+	
+	<div class = "section7"> 
+		<!-- sc Link to the fountain pens subreddit -->
+		<h2 style = "text-align: center"> Need help deciding what to get? <a href = "https://www.reddit.com/r/pens/">Visit r/pens</a> </h2>
+	</div>
+		
+	<!-- sc Create section for contact information with formatting footer -->
+	<div class = "footer">
+	<h3 style="color:#0B4B2B;"> Contact Us</h3>
+	<!-- sc Create unordered list for social media pages and other contact information -->
+	<ul>
+		<li> Twitter: @NoInkNoPen</li>
+		<li> Instagram: @NoInkNoPen</li>
+		<li> Facebook: @NoInkNoPen</li>
+		<li> Reddit: r/NoInkNoPen</li>
+		<!-- sc Link to email-->
+		<li> Email: <a href = "mailto:sc3872@drexel.edu">sc3872@drexel.edu </a></li>
+	</ul>	
+	</div>
 </div>
-
 </body>
-
-
 </html>

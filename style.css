@@ -22,15 +22,35 @@ a{
 	text-decoration: none;
 }
 
+/*jz Spacing out tables (specifically bestsellers) */
+th, td{
+	padding: 20px;
+}
+
+
 /*jz Format body of the page */
 .section2{
 	background-color: #a5d2b9;
 }
 
-/*jz Format used to center elements on page */
-.center{
-	text-align: center;					
-	margin: auto;						
+/*jz Organizes the navigation bar */
+.section3{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+}
+
+/*jz Affects the centering and size of navigation bar text */
+.section3 > a {
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/* Centering and coloring the slogan and principles */
+.section5 {
+	background-color: #a5d2b9;
+	color: white;
+	text-align: center;
 }
 
 /*jz Format logo size and location on the page */
@@ -48,9 +68,11 @@ a{
 	height: auto;
 }
 
-/*jz Format the contact information section */
+/*sc Format the contact information section */
 .footer{
 	color: #0B4B2B;
 	background-color: #a5d2b9;	
 	display: block;
 }
+
+
