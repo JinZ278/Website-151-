@@ -1,9 +1,9 @@
 
 /*
 =========================================================================================
-Project Name: No Ink No Pen Homepage CSS Sheet
-Project Description: Create CSS Sheet for No Ink No Pen Homepage
-Date: 10/7/2021
+Project Name: No Ink No Pen Site CSS Sheet
+Project Description: Create CSS Sheet for No Ink No Pen Website
+Date: 10/18/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 */
@@ -16,7 +16,7 @@ body{
 	margin: auto;
 }
 
-/*jz Format background of the page */
+/*jz Format the links */
 a{
 	color: #0B4B2B;
 	text-decoration: none;
@@ -33,7 +33,7 @@ th, td{
 	background-color: #a5d2b9;
 }
 
-/*jz Organizes the navigation bar */
+/*jz Organizes the navigation bar in a grid format */
 .section3{
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto;
@@ -68,11 +68,34 @@ th, td{
 	height: auto;
 }
 
-/*sc Format the contact information section */
+/*sc Format the contact information section using a grid layout */
 .footer{
 	color: #0B4B2B;
 	background-color: #a5d2b9;	
-	display: block;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin: auto;
+	
 }
 
+/* sc To scale images to the page */
+.scale-image{
+	display: block;
+	margin: auto;
+	max-width:100%;
+}
+
+/* sc To format text within footer section - specify width to be relative to 25 times the font-size */
+.item2{
+	text-align:left;
+	max-width:100%;
+	margin: auto;
+	width: 25em;
+}
+
+.selectColor{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	grid-template-rows: auto auto;
+}
 
