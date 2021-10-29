@@ -26,16 +26,20 @@ Programmer Name: Suki Chen and Jin Zhang
 
 <body>
 
-<!-- jz Specify class names for CSS sheet--> 
-<div class = "section1"> 
+<!-- jz Specify class names for CSS file--> 
+<div class = "container"> 
+	
+	<br>
 
 	<!-- jz add logo to the center of the page -->
-	<div class = "section2"> 
-		<img src = "images/logo.png" alt = "Logo" class = "logo">
+	<div class = "logo"> 
+		<img src = "images/logo.png" alt = "Logo" class = "logo-image">
 	</div>
 	
+	<br>
+	
 	<!-- jz Link to other pages on the website and classify the links to have the class attribute center -->
-	<div class = "section3"> 
+	<div class = "navbar"> 
 		<a href = "index.html" class = "item1"> HOME </a>
 		<a href = "about.html" class = "item1"> ABOUT </a>
 		<a href = "ballpoint.html" class = "item1"> BALLPOINT </a>
@@ -43,50 +47,53 @@ Programmer Name: Suki Chen and Jin Zhang
 		<a href = "ink.html" class = "item1"> INK </a>
 		<a href = "citations.html" class = "item1"> CITATIONS </a>
 	</div>
-
-<!-- sc Create section of page for inputtin guser information and choosing options from a list -->
-<div>
-<form name = "ballpointForm">
-	<h2>Ballpoint Pens</h2>  
-<!-- sc Step 1: section to choose brand -->	
-<h4> Select the brand of pen </h4>
-	<input name= "brand" type="radio" value="Uni"> Uni
-	<input name= "brand" type="radio" value="Zebra"> Zebra
-	<input name= "brand" type="radio" value="Pilot">Pilot
-	<input name= "brand" type="radio" value="Pilot">Pentel
-	<input name= "brand" type="radio" value="Pilot">Sakura
-
-<!-- sc Step 2: section to choose color of pen (red, orange, yellow, green, blue, etc, or multiple) -->	
-<h4> Select what color you would like your pen to be  </h4>
-<!-- sc Create a grid to contain the color options -->
-<div class = "selectColor">
-<!-- sc Create a grid item to organize content and define the colors available -->
-	<div class="itemColor">
-	<input name="colors" type="checkbox" value="red">Red &nbsp;
-	<input name="colors" type="checkbox" value="orange">Orange &nbsp; 
-	<input name="colors" type="checkbox" value="yellow">Yellow &nbsp;
-	<input name="colors" type="checkbox" value="green">Green &nbsp;
-	<input name="colors" type="checkbox" value="blue">Blue &nbsp;
-	<input name="colors" type="checkbox" value="purple">Purple &nbsp;
-	<input name="colors" type="checkbox" value="pink">Pink &nbsp;
-	<input name="colors" type="checkbox" value="clear">Clear &nbsp;
-	<input name="colors" type="checkbox" value="white">White &nbsp;
-	<input name="colors" type="checkbox" value="gray">Gray &nbsp;
-	<input name="colors" type="checkbox" value="brown">Brown &nbsp;
-	<input name="colors" type="checkbox" value="black">Black &nbsp;
-	</div>
+	
+	<br>
 </div>
 
-<!-- sc Step 3: section to choose tip size (0.38mm, 0.4mm, 0.7mm) -->	
-<h4> Select the size of the tip </h4>	
-	<input name="tip" type="checkbox" value="0.3mm">0.3mm &nbsp;
-	<input name="tip" type="checkbox" value="0.38mm">0.38mm &nbsp;
-	<input name="tip" type="checkbox" value="0.5mm">0.5mm &nbsp;
-	<input name="tip" type="checkbox" value="0.7mm">0.7mm &nbsp;
-	<input name="tip" type="checkbox" value="1.0mm">1.0mm
+<!-- sc Create section of page for inputtin guser information and choosing options from a list -->
+<div class = "ballpoint">
+	<form name = "ballpointForm">
+		<h2>Ballpoint Pens</h2>  
+		<!-- sc Step 1: section to choose brand -->	
+		<h4> Select the brand of pen </h4>
+		<input name= "brand" type="radio" value="Uni"> Uni
+		<input name= "brand" type="radio" value="Zebra"> Zebra
+		<input name= "brand" type="radio" value="Pilot">Pilot
+		<input name= "brand" type="radio" value="Pilot">Pentel
+		<input name= "brand" type="radio" value="Pilot">Sakura
 
-	
-<!-- sc Step 4: section to enter contact information -->	
+		<!-- sc Step 2: section to choose color of pen (red, orange, yellow, green, blue, etc, or multiple) -->	
+		<h4> Select what color you would like your pen to be  </h4>
+		<!-- sc Create a grid to contain the color options -->
+		<div class = "selectColor">
+		<!-- sc Create a grid item to organize content and define the colors available -->
+			<div class="itemColor">
+				<input name="colors" type="checkbox" value="red">Red &nbsp;
+				<input name="colors" type="checkbox" value="orange">Orange &nbsp; 
+				<input name="colors" type="checkbox" value="yellow">Yellow &nbsp;
+				<input name="colors" type="checkbox" value="green">Green &nbsp;
+				<input name="colors" type="checkbox" value="blue">Blue &nbsp;
+				<input name="colors" type="checkbox" value="purple">Purple &nbsp;
+				<input name="colors" type="checkbox" value="pink">Pink &nbsp;
+				<input name="colors" type="checkbox" value="clear">Clear &nbsp;
+				<input name="colors" type="checkbox" value="white">White &nbsp;
+				<input name="colors" type="checkbox" value="gray">Gray &nbsp;
+				<input name="colors" type="checkbox" value="brown">Brown &nbsp;
+				<input name="colors" type="checkbox" value="black">Black &nbsp;
+			</div>
+		</div>
+
+		<!-- sc Step 3: section to choose tip size (0.38mm, 0.4mm, 0.7mm) -->	
+		<h4> Select the size of the tip </h4>	
+		<input name="tip" type="checkbox" value="0.3mm">0.3mm &nbsp;
+		<input name="tip" type="checkbox" value="0.38mm">0.38mm &nbsp;
+		<input name="tip" type="checkbox" value="0.5mm">0.5mm &nbsp;
+		<input name="tip" type="checkbox" value="0.7mm">0.7mm &nbsp;
+		<input name="tip" type="checkbox" value="1.0mm">1.0mm
+
+		
+		<!-- sc Step 4: section to enter contact information -->	
 		<h4> Contact and Mailing Information </h4>
 		<div class = "contact">
 			<div class = "item3">
@@ -95,57 +102,57 @@ Programmer Name: Suki Chen and Jin Zhang
 				<p>
 					City:&nbsp;&nbsp;<input name = "city" size="20" type = "text">
 					&nbsp;&nbsp; State:&nbsp;&nbsp;<select name="states" style="font-family: 'Cinzel', serif;">
-						<option value="AL">Alabama - AL</option>
-						<option value="AK">Alaska - AL</option>
-						<option value="AZ">Arizona - AZ</option>
-						<option value="AR">Arkansas - AK</option>
-						<option value="CA">California - CA</option>
-						<option value="CO">Colorado - CO</option>
-						<option value="CT">Connecticut - CT</option>
-						<option value="DE">Delaware - DE</option>
-						<option value="DC">District Of Columbia - DC</option>
-						<option value="FL">Florida - FL</option>
-						<option value="GA">Georgia - GA</option>
-						<option value="HI">Hawaii - HI</option>
-						<option value="ID">Idaho - ID</option>
-						<option value="IL">Illinois - IL</option>
-						<option value="IN">Indiana - IN</option>
-						<option value="IA">Iowa - IA</option>
-						<option value="KS">Kansas - KS</option>
-						<option value="KY">Kentucky - KY</option>
-						<option value="LA">Louisiana - LA</option>
-						<option value="ME">Maine - ME</option>
-						<option value="MD">Maryland - MD</option>
-						<option value="MA">Massachusetts - MA</option>
-						<option value="MI">Michigan - MI</option>
-						<option value="MN">Minnesota - MN</option>
-						<option value="MS">Mississippi - MS</option>
-						<option value="MO">Missouri - MO</option>
-						<option value="MT">Montana - MT</option>
-						<option value="NE">Nebraska - NE</option>
-						<option value="NV">Nevada - NV</option>
-						<option value="NH">New Hampshire - NH</option>
-						<option value="NJ">New Jersey - NJ</option>
-						<option value="NM">New Mexico - NM</option>
-						<option value="NY">New York - NY</option>
-						<option value="NC">North Carolina - NC</option>
-						<option value="ND">North Dakota - ND</option>
-						<option value="OH">Ohio - OH</option>
-						<option value="OK">Oklahoma - OK</option>
-						<option value="OR">Oregon - OR</option>
-						<option value="PA">Pennsylvania - PA</option>
-						<option value="RI">Rhode Island - RI</option>
-						<option value="SC">South Carolina - SC</option>
-						<option value="SD">South Dakota - SD</option>
-						<option value="TN">Tennessee - TN</option>
-						<option value="TX">Texas - TX</option>
-						<option value="UT">Utah - UT</option>
-						<option value="VT">Vermont - VT</option>
-						<option value="VA">Virginia - VA</option>
-						<option value="WA">Washington - WA</option>
-						<option value="WV">West Virginia - WV</option>
-						<option value="WI">Wisconsin - WI</option>
-						<option value="WY">Wyoming - WY</option>
+					<option value="AL">Alabama - AL</option>
+					<option value="AK">Alaska - AL</option>
+					<option value="AZ">Arizona - AZ</option>
+					<option value="AR">Arkansas - AK</option>
+					<option value="CA">California - CA</option>
+					<option value="CO">Colorado - CO</option>
+					<option value="CT">Connecticut - CT</option>
+					<option value="DE">Delaware - DE</option>
+					<option value="DC">District Of Columbia - DC</option>
+					<option value="FL">Florida - FL</option>
+					<option value="GA">Georgia - GA</option>
+					<option value="HI">Hawaii - HI</option>
+					<option value="ID">Idaho - ID</option>
+					<option value="IL">Illinois - IL</option>
+					<option value="IN">Indiana - IN</option>
+					<option value="IA">Iowa - IA</option>
+					<option value="KS">Kansas - KS</option>
+					<option value="KY">Kentucky - KY</option>
+					<option value="LA">Louisiana - LA</option>
+					<option value="ME">Maine - ME</option>
+					<option value="MD">Maryland - MD</option>
+					<option value="MA">Massachusetts - MA</option>
+					<option value="MI">Michigan - MI</option>
+					<option value="MN">Minnesota - MN</option>
+					<option value="MS">Mississippi - MS</option>
+					<option value="MO">Missouri - MO</option>
+					<option value="MT">Montana - MT</option>
+					<option value="NE">Nebraska - NE</option>
+					<option value="NV">Nevada - NV</option>
+					<option value="NH">New Hampshire - NH</option>
+					<option value="NJ">New Jersey - NJ</option>
+					<option value="NM">New Mexico - NM</option>
+					<option value="NY">New York - NY</option>
+					<option value="NC">North Carolina - NC</option>
+					<option value="ND">North Dakota - ND</option>
+					<option value="OH">Ohio - OH</option>
+					<option value="OK">Oklahoma - OK</option>
+					<option value="OR">Oregon - OR</option>
+					<option value="PA">Pennsylvania - PA</option>
+					<option value="RI">Rhode Island - RI</option>
+					<option value="SC">South Carolina - SC</option>
+					<option value="SD">South Dakota - SD</option>
+					<option value="TN">Tennessee - TN</option>
+					<option value="TX">Texas - TX</option>
+					<option value="UT">Utah - UT</option>
+					<option value="VT">Vermont - VT</option>
+					<option value="VA">Virginia - VA</option>
+					<option value="WA">Washington - WA</option>
+					<option value="WV">West Virginia - WV</option>
+					<option value="WI">Wisconsin - WI</option>
+					<option value="WY">Wyoming - WY</option>
 					</select>
 					&nbsp;&nbsp;Zip:&nbsp;&nbsp;<input name="zip" size="5" type="text">
 				</p>
@@ -153,37 +160,35 @@ Programmer Name: Suki Chen and Jin Zhang
 				<p>Email:&nbsp;&nbsp;<input name = "email" size="50" type = "text"></p>
 				<p>Mailing Instructions (Enter N/A if none):</p>
 				<textarea name = "instructions" rows="5" cols="75"></textarea>
-			
 			</div>
-		</div>
-		
-	<input type="button" value ="Submit" onClick="doGelSubmit()" style="font-family: 'Cinzel', serif;">
-	<input type="button" value ="Clear Entries" onClick="doGelClear()" style="font-family: 'Cinzel', serif;">
-	
-</form>
+		</div>	
+		<input type="button" value ="Submit" onClick="doGelSubmit()" style="font-family: 'Cinzel', serif;">
+		<input type="button" value ="Clear Entries" onClick="doGelClear()" style="font-family: 'Cinzel', serif;">
+	</form>
 </div>	
+
 <br>
 	
-	<!-- sc Create section for contact information with formatting footer -->
-	<div class = "footer">
+<!-- sc Create section for contact information with formatting footer -->
+<div class = "footer">
 	<!-- sc Add space before header and change color of contact us header to white -->
-	<div class = "item2">
-	<h3 style="color:#F9F9F9;" > About Us </h3>
-	<p> No Ink No Pen is a student-owned stationery store based in Philadelphia, PA. We currently do not have a physical location but...<a href ="about.html">read more</a></p>
+	<div class = "footer-item">
+		<h3 style="color:#F9F9F9;" > About Us </h3>
+		<p> No Ink No Pen is a student-owned stationery store based in Philadelphia, PA. We currently do not have a physical location but...<a href ="about.html">read more</a></p>
 	</div>
 	<!-- sc Create unordered list for social media pages and other contact information -->
-	<div class = "item2">
-	<h3 style="color:#F9F9F9;" > &nbsp Contact Us </h3>
-	<ul>
-		<li> Twitter: @NoInkNoPen</li>
-		<li> Instagram: @NoInkNoPen</li>
-		<li> Facebook: @NoInkNoPen</li>
-		<li> Reddit: r/NoInkNoPen</li>
-		<!-- sc Link to email -->
-		<li> Email: <a href = "mailto:sc3872@drexel.edu">sc3872@drexel.edu </a></li>
-	</ul>
+	<div class = "footer-item">
+		<h3 style="color:#F9F9F9;" > &nbsp Contact Us </h3>
+		<ul>
+			<li> Twitter: @NoInkNoPen</li>
+			<li> Instagram: @NoInkNoPen</li>
+			<li> Facebook: @NoInkNoPen</li>
+			<li> Reddit: r/NoInkNoPen</li>
+			<!-- sc Link to email -->
+			<li> Email: <a href = "mailto:sc3872@drexel.edu">sc3872@drexel.edu </a></li>
+		</ul>
 	</div>
-	</div>
+</div>
 
 </body>
 </html>

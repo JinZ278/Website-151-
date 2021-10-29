@@ -10,7 +10,7 @@ Programmer Name: Suki Chen and Jin Zhang
 
 /* jz Format background color, width, font type, and margin */
 body{
-	max-width: 1100px;
+	max-width: 120em;
 	background-color:#F9F9F9;			
 	font-family: 'Cinzel', serif;		
 	margin: auto;
@@ -23,48 +23,86 @@ a{
 }
 
 /*jz Spacing out tables (specifically bestsellers) */
-th, td{
-	padding: 20px;
+th{
+	padding: 2em;
+	margin: auto;
 }
 
-
 /*jz Format body of the page */
-.section2{
+.logo{
+	max-width: 100%;
 	background-color: #a5d2b9;
 }
 
+/*jz Format logo size and location on the page */
+.logo-image{
+	width: 16%;
+	min-width: 10em;
+	max-width: 50em;
+	height: auto;
+	margin: auto;
+	display: block;
+}
+
 /*jz Organizes the navigation bar in a grid format */
-.section3{
+.navbar{
+	min-width: 12em;
+	max-width: 60em;
+	margin: auto;
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto;
 }
 
-/*jz Affects the centering and size of navigation bar text */
-.section3 > a {
+/*jz Affects the centering, size of navigation bar text and responsiveness*/
+.navbar > a {
 	text-align: center;
-	font-size: 25px;
+	font-size: calc(12px + 0.5vw);
 	font-weight: bold;
-}
-
-/* Centering and coloring the slogan and principles */
-.section5 {
-	background-color: #a5d2b9;
-	color: white;
-	text-align: center;
-}
-
-/*jz Format logo size and location on the page */
-.logo{
-	width: 25%;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
 }
 
 /*jz Format the header image on the page */
 .header{
 	width: 100%;
+	min-width: 12em;
+	max-width: 60em;
+	height: auto;
+	margin: auto;
+	display: block;
+}
+
+/*jz Centering and coloring the slogan and principles */
+.slogan {
+	max-width: 60em;
+	margin: auto;
+	display: block;
+	background-color: #a5d2b9;
+}
+
+/* jz making the text responsive */
+.slogan > h1 {
+	color: white;
+	text-align: center;
+	font-size: calc(14px + 1vw);
+	font-weight: bold;
+	
+}
+
+/* jz making image responsive */
+.bestsellers {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* jz link outsite the website */
+.reddit-link > h2 > a {
+	text-decoration: underline;
+}
+
+/* sc To scale images to the page */
+.scale-image{
+	display: block;
+	max-width:100%;
+	margin: auto;
 	height: auto;
 }
 
@@ -75,27 +113,71 @@ th, td{
 	display: grid;
 	grid-template-columns: auto auto;
 	margin: auto;
-	
-}
-
-/* sc To scale images to the page */
-.scale-image{
-	display: block;
-	margin: auto;
-	max-width:100%;
 }
 
 /* sc To format text within footer section - specify width to be relative to 25 times the font-size */
-.item2{
+.footer-item{
 	text-align:left;
 	max-width:100%;
-	margin: auto;
+	margin-left: auto;
+	margin-right:auto;
 	width: 25em;
 }
 
+/* jz removes the dots for unordered list */
+.footer-item > ul{
+	list-style: none;
+}
+
+/* jz making the footer responsive to width */
+@media only screen and (max-width: 600px) {
+	.footer {
+		grid-template-columns: auto;
+		margin: auto;
+	}
+}
+
+/* what is this???? */
 .selectColor{
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto;
 	grid-template-rows: auto auto;
+}	
+
+/* jz about us content container */
+.about-us {
+	background-color: #a5d2b9;
+	min-width: 12em;
+	max-width: 60em;
+	margin: auto;
+}
+
+/* jz about us h1 css */
+.about-us > h1 {
+	text-align: center;
+}
+
+
+/* jz about us ending message  */
+.end-message {
+	text-align: center;
+	color: #a5d2b9;
+	min-width: 12em;
+	max-width: 60em;
+	margin: auto;
+}
+
+/* jz ballpoint pen content container */
+.ballpoint {
+	min-width: 12em;
+	max-width: 60em;
+	margin: auto;
+}
+
+/* jz fountain pen content container */
+.fountain {
+	min-width: 12em;
+	max-width: 60em;
+	margin: auto;
 }
 
