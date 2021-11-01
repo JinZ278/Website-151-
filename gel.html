@@ -2,9 +2,9 @@
 
 <!-- 
 =========================================================================================
-Project Name: No Ink No Pen Ballpoint Pens
-Project Description: To create content for the ballpoint pens section page of No Ink No Pen
-Date: 10/18/2021
+Project Name: No Ink No Pen Gel Pens
+Project Description: To create form for the gel pens section page of No Ink No Pen
+Date: 10/30/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 -->
@@ -18,7 +18,7 @@ Programmer Name: Suki Chen and Jin Zhang
 	<!-- jz Changing the font of the page to Cinzel by importing from Google Fonts -->
 	<style> @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap'); </style> 
 	<!-- jz Title of the document -->
-	<title>Pens</title> 
+	<title>Gel Pens</title> 
 	<script>
 
 	</script>
@@ -42,7 +42,7 @@ Programmer Name: Suki Chen and Jin Zhang
 	<div class = "navbar"> 
 		<a href = "index.html" class = "item1"> HOME </a>
 		<a href = "about.html" class = "item1"> ABOUT </a>
-		<a href = "ballpoint.html" class = "item1"> BALLPOINT </a>
+		<a href = "gel.html" class = "item1"> BALLPOINT </a>
 		<a href = "fountain.html" class = "item1"> FOUNTAIN </a>
 		<a href = "ink.html" class = "item1"> INK </a>
 		<a href = "citations.html" class = "item1"> CITATIONS </a>
@@ -51,9 +51,9 @@ Programmer Name: Suki Chen and Jin Zhang
 	<br>
 </div>
 
-<!-- sc Create section of page for inputtin guser information and choosing options from a list -->
-<div class = "ballpoint">
-	<form name = "ballpointForm">
+<!-- sc Create section of page for inputting user information and choosing options from a list -->
+<div class = "gel">
+	<form name = "gelForm">
 		<h2>Ballpoint Pens</h2>  
 		<!-- sc Step 1: section to choose brand -->	
 		<h4> Select the brand of pen </h4>
@@ -97,6 +97,7 @@ Programmer Name: Suki Chen and Jin Zhang
 		<h4> Contact and Mailing Information </h4>
 		<div class = "contact">
 			<div class = "item3">
+			<!-- sc made various inputs to collect user information, with varying size lengths for each input, and text type -->
 				<p>Name: &nbsp;&nbsp;<input name = "customer" size="50" type = "text"></p>
 				<p>Address:&nbsp;&nbsp;<input name = "address" size="50" type = "text"></p>
 				<p>
@@ -162,6 +163,7 @@ Programmer Name: Suki Chen and Jin Zhang
 				<textarea name = "instructions" rows="5" cols="75"></textarea>
 			</div>
 		</div>	
+		<!-- sc added buttons to submit and clear entries, with functions to be defined using JavaScript -->
 		<input type="button" value ="Submit" onClick="doGelSubmit()" style="font-family: 'Cinzel', serif;">
 		<input type="button" value ="Clear Entries" onClick="doGelClear()" style="font-family: 'Cinzel', serif;">
 	</form>

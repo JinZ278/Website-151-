@@ -3,8 +3,8 @@
 <!-- 
 =========================================================================================
 Project Name: No Ink No Pen Fountain Pens
-Project Description: To create content for the fountain pens section page of No Ink No Pen
-Date: 10/18/2021
+Project Description: To create form for the fountain pens section page of No Ink No Pen
+Date: 10/30/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 -->
@@ -18,7 +18,7 @@ Programmer Name: Suki Chen and Jin Zhang
 	<!-- jz Changing the font of the page to Cinzel by importing from Google Fonts -->
 	<style> @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap'); </style> 
 	<!-- jz Title of the document -->
-	<title>Pens</title> 
+	<title>Fountain Pens</title> 
 
 </head>
 
@@ -49,7 +49,7 @@ Programmer Name: Suki Chen and Jin Zhang
 	<br>
 </div>
 
-<!-- sc Create section of page for inputtin guser information and choosing options from a list -->
+<!-- sc Create section of page for inputting user information and choosing options from a list -->
 <div class = "fountain">
 	<form name = "fountainForm">
 		<h2>Fountain Pens</h2>  
@@ -80,13 +80,14 @@ Programmer Name: Suki Chen and Jin Zhang
 			</div>
 		</div>
 
-		<!-- sc Step 3: section to choose nib size (0.38mm, 0.4mm, 0.7mm) -->	
+		<!-- sc Step 3: section to choose nib size (from extra fine to stub nib) -->	
 		<h4> Select the size of the tip </h4>	
-		<input name="nib" type="checkbox" value="extra-fine">Extra fine &nbsp;
-		<input name="nib" type="checkbox" value="fine">Fine &nbsp;
-		<input name="nib" type="checkbox" value="medium">Medium &nbsp;
-		<input name="nib" type="checkbox" value="broad">Broad &nbsp;
-		<input name="nib" type="checkbox" value="stub">Stub &nbsp;
+		<!-- sc defined input as radio type and named it nib -->
+		<input name="nib" type="radio" value="extra-fine">Extra fine &nbsp;
+		<input name="nib" type="radio" value="fine">Fine &nbsp;
+		<input name="nib" type="radio" value="medium">Medium &nbsp;
+		<input name="nib" type="radio" value="broad">Broad &nbsp;
+		<input name="nib" type="radio" value="stub">Stub &nbsp;
 
 
 	
@@ -94,6 +95,7 @@ Programmer Name: Suki Chen and Jin Zhang
 		<h4> Contact and Mailing Information </h4>
 		<div class = "contact">
 			<div class = "item3">
+			<!-- sc made various inputs to collect user information, with varying size lengths for each input, and text type -->
 				<p>Name: &nbsp;&nbsp;<input name = "customer" size="50" type = "text"></p>
 				<p>Address:&nbsp;&nbsp;<input name = "address" size="50" type = "text"></p>
 				<p>
@@ -160,7 +162,7 @@ Programmer Name: Suki Chen and Jin Zhang
 			
 			</div>
 		</div>
-		
+	<!-- sc added buttons to submit and clear entries, with functions to be defined using JavaScript -->
 	<input type="button" value ="Submit" onClick="doFountainSubmit()" style="font-family: 'Cinzel', serif;">
 	<input type="button" value ="Clear Entries" onClick="doFountainClear()" style="font-family: 'Cinzel', serif;">
 	

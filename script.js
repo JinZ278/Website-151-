@@ -1,3 +1,13 @@
+
+/*
+=========================================================================================
+Project Name: No Ink No Pen Site Script
+Project Description: Create Script for No Ink No Pen Website
+Date: 10/30/2021
+Programmer Name: Suki Chen and Jin Zhang
+=========================================================================================
+*/
+
 // jz functions to get all info and submit
 function doGelSubmit() {
 	// In Work
