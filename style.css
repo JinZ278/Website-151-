@@ -3,7 +3,7 @@
 =========================================================================================
 Project Name: No Ink No Pen Site CSS Sheet
 Project Description: Create CSS Sheet for No Ink No Pen Website
-Date: 10/30/2021
+Date: 11/5/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 */
@@ -80,7 +80,7 @@ th{
 
 /* jz making the text responsive */
 .slogan > h1 {
-	color: white;
+	color: #0B4B2B;
 	text-align: center;
 	font-size: calc(14px + 1vw);
 	font-weight: bold;
@@ -135,9 +135,17 @@ th{
 		grid-template-columns: auto;
 		margin: auto;
 	}
-}	
+}
 
-/* jz formatting about us content container */
+/* what is this????
+.selectColor{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	grid-template-rows: auto auto;
+}	
+*/ 
+
+/* jz about us content container */
 .about-us {
 	background-color: #a5d2b9;
 	min-width: 12em;
@@ -145,13 +153,13 @@ th{
 	margin: auto;
 }
 
-/* jz formatting about us h1 css */
+/* jz centering about us h1 */
 .about-us > h1 {
 	text-align: center;
 }
 
 
-/* jz formatting about us ending message  */
+/* jz about us ending message  */
 .end-message {
 	text-align: center;
 	color: #a5d2b9;
@@ -160,14 +168,14 @@ th{
 	margin: auto;
 }
 
-/* jz formatting gel pen content container */
+/* jz gel pen content container */
 .gel {
 	min-width: 12em;
 	max-width: 60em;
 	margin: auto;
 }
 
-/* jz formatting fountain pen content container */
+/* jz fountain pen content container */
 .fountain {
 	min-width: 12em;
 	max-width: 60em;
