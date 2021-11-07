@@ -97,7 +97,7 @@ function doGelSubmit() {
 
 function doFountainSubmit() {
 	
-		// jz assign order information to variables
+	// jz assign order information to variables
 	var brand  = document.querySelectorAll(`input[name="brand"]:checked`);
 	var color = document.querySelectorAll(`input[name="colors"]:checked`);
 	var nib = document.querySelectorAll(`input[name="nib"]:checked`);
