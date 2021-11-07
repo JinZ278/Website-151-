@@ -8,23 +8,19 @@ Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 */
 
-/*	
-Add these variables in 
 
-var brand = document.gelForm.brand[0].value;
-var color = document.gelForm.colors[0].value;
-var tip = document.gelForm.tip[0].value;
-
-*/
+// jz boolean for clearing values
+var clear = false;
 
 // jz function to get all information for gel form and submit
-
 function doGelSubmit() {
-	// In Work
-	// var color = document.querySelectorAll(`input[name="colors"]:checked`);
-	// console.log(color[0].value);
+
+	// jz assign order information to variables
+	var brand  = document.querySelectorAll(`input[name="brand"]:checked`);
+	var color = document.querySelectorAll(`input[name="colors"]:checked`);
+	var tip = document.querySelectorAll(`input[name="tip"]:checked`);
 	
-	// jz variables to retrieve contact information
+	// jz assign contact information to variables
 	var name = document.getElementsByName('customer')[0].value;
 	var address = document.getElementsByName('address')[0].value;
 	var city = document.getElementsByName('city')[0].value;
@@ -33,61 +29,83 @@ function doGelSubmit() {
 	var phone = document.getElementsByName('phone')[0].value;
 	var email = document.getElementsByName('email')[0].value;
 	var error = "";
-	//jin's test code
-	//document.getElementsByName('customer')[0].value="";
+	var order = "";
 	
-	//jz create a string that alerts the users of all missing inputs
-	if (!name)
-	{
+	
+	//jz concatenate a string informing users of all missing inputs
+	if (!brand[0].value){
+		error = error.concat("Please select a brand.\n");
+	}
+	if (!color[0].value){
+		error = error.concat("Please select at least 1 color.\n");
+	}
+	if (!tip[0].value){
+		error = error.concat("Please select a tip size.\n");
+	}
+	if (!name){
 		error = error.concat("Please enter your name.\n");
 	}	
-	if (!address)
-	{
+	if (!address){
 		error = error.concat("Please enter your address.\n");
 	}
-	if (!city)
-	{
+	if (!city){
 		error = error.concat("Please enter your city.\n");
 	}
-	if (!zip)
-	{
+	if (!zip){
 		error = error.concat("Please enter your zip.\n");
 	}
-	if (!phone)
-	{
+	if (!phone){
 		error = error.concat("Please enter your phone number.\n");
 	}
-	if (!email)
-	{
+	if (!email){
 		error = error.concat("Please enter your email.\n");
 	}
-	// sc validate that there are no errors
-	if (error != "")
-	{
+	// jz validate that there are no errors
+	if (error != ""){
 		alert(error);
 		error = "";
 	}	
 	// sc print out order details in a popup if there is all fields are filled
-	else if (error == "")
-	{
-		alert("Order Details:" + "\nName: " + name + "\nAddress: " + address + "\nCity: " + city + "\nState: " + state + "\nZip: " + zip + "\nPhone: " + phone + "\nEmail: " + email)
+	else if (error == ""){
+		order = order.concat("-Order Details-\n");
+		order = order.concat("Brand: " + brand[0].value + "\n");
 		
+		// jz for loop to add all colors
+		order = order.concat("Colors: ");
+		for (i=0; color[i] ; i++){
+			order = order.concat(color[i].value + ", ");
+		}
+		order = order.concat("\n");
+		
+		order = order.concat("Tip Size: " + tip[0].value + "\n");
+		order = order.concat("Name: " + name + "\n");
+		order = order.concat("Address: " + address + "\n");
+		order = order.concat("City: " + city + "\n");
+		order = order.concat("State: " + state + "\n");
+		order = order.concat("Zip: " + zip + "\n");
+		order = order.concat("Phone: " + phone + "\n");
+		order = order.concat("Email: " + email + "\n");
+		alert(order)
+		error = "";
+		order = "";
 	}
 
-}
-// sc function to on first click, clear steps 1, 2, 3 and on second click, clear step 4 information
-function doGelClear() {
-
-	document.getElementsByName("customer").value="";
-	
-	alert("Contact and Mailing Information cleared")
 }
 
 function doFountainSubmit() {
 	
 }
 
-function doFountainClear() {
-	
+// jz function to on first click, clear steps 1, 2, 3 and on second click, clear step 4 information
+function doClear() {
+	if (!clear){
+		document.getElementById("form1").reset();
+		clear = true;
+	}
+	else {
+		document.getElementById("form1").reset();
+		document.getElementById("form2").reset();
+		clear = false;
+	}
 }
 

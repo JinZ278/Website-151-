@@ -53,15 +53,15 @@ Programmer Name: Suki Chen and Jin Zhang
 
 <!-- sc Create section of page for inputting user information and choosing options from a list -->
 <div class = "gel">
-	<form name = "gelForm">
+	<form id = "form1">
 		<h2>Gel Pens</h2>  
 		<!-- sc Step 1: section to choose brand -->	
 		<h4> Select the brand of pen </h4>
 		<input name= "brand" type="radio" value="Uni">Uni
 		<input name= "brand" type="radio" value="Zebra">Zebra
 		<input name= "brand" type="radio" value="Pilot">Pilot
-		<input name= "brand" type="radio" value="Pilot">Pentel
-		<input name= "brand" type="radio" value="Pilot">Sakura
+		<input name= "brand" type="radio" value="Pentel">Pentel
+		<input name= "brand" type="radio" value="Sakura">Sakura
 
 		<!-- sc Step 2: section to choose color of pen (red, orange, yellow, green, blue, etc, or multiple) -->	
 		<h4> Select what color you would like your pen to be  </h4>
@@ -75,6 +75,9 @@ Programmer Name: Suki Chen and Jin Zhang
 				<input name="colors" type="checkbox" value="green">Green &nbsp;
 				<input name="colors" type="checkbox" value="blue">Blue &nbsp;
 				<input name="colors" type="checkbox" value="purple">Purple &nbsp;
+			</div>
+			<br>
+			<div class="itemColor">
 				<input name="colors" type="checkbox" value="pink">Pink &nbsp;
 				<input name="colors" type="checkbox" value="clear">Clear &nbsp;
 				<input name="colors" type="checkbox" value="white">White &nbsp;
@@ -92,6 +95,9 @@ Programmer Name: Suki Chen and Jin Zhang
 		<input name="tip" type="radio" value="0.7mm">0.7mm &nbsp;
 		<input name="tip" type="radio" value="1.0mm">1.0mm
 
+	</form>
+	
+	<form id = "form2">
 		
 		<!-- sc Step 4: section to enter contact information -->	
 		<h4> Contact and Mailing Information </h4>
@@ -165,7 +171,7 @@ Programmer Name: Suki Chen and Jin Zhang
 		</div>	
 		<!-- sc added buttons to submit and clear entries, with functions to be defined using JavaScript -->
 		<input type="button" value ="Submit" onClick="doGelSubmit()" style="font-family: 'Cinzel', serif;">
-		<input type="button" value ="Clear Entries" onClick="doGelClear()" style="font-family: 'Cinzel', serif;">
+		<input type="button" value ="Clear Entries" onClick="doClear()" style="font-family: 'Cinzel', serif;">
 		
 	</form>
 </div>	

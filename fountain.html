@@ -51,7 +51,7 @@ Programmer Name: Suki Chen and Jin Zhang
 
 <!-- sc Create section of page for inputting user information and choosing options from a list -->
 <div class = "fountain">
-	<form name = "fountainForm">
+	<form name = "form1">
 		<h2>Fountain Pens</h2>  
 		<!-- sc Step 1: section to choose brand -->	
 		<h4> Select the brand of pen </h4>
@@ -89,8 +89,9 @@ Programmer Name: Suki Chen and Jin Zhang
 		<input name="nib" type="radio" value="broad">Broad &nbsp;
 		<input name="nib" type="radio" value="stub">Stub &nbsp;
 
-
+	</form>
 	
+	<form name = "form2">
 		<!-- sc Step 4: section to enter contact information -->	
 		<h4> Contact and Mailing Information </h4>
 		<div class = "contact">
@@ -164,7 +165,7 @@ Programmer Name: Suki Chen and Jin Zhang
 		</div>
 	<!-- sc added buttons to submit and clear entries, with functions to be defined using JavaScript -->
 	<input type="button" value ="Submit" onClick="doFountainSubmit()" style="font-family: 'Cinzel', serif;">
-	<input type="button" value ="Clear Entries" onClick="doFountainClear()" style="font-family: 'Cinzel', serif;">
+	<input type="button" value ="Clear Entries" onClick="doClear()" style="font-family: 'Cinzel', serif;">
 	
 	</form>
 </div>	
