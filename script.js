@@ -92,6 +92,7 @@ function doGelSubmit() {
 
 }
 
+// sc Work in Progress
 function doFountainSubmit() {
 	
 }
