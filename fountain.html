@@ -38,9 +38,9 @@ Programmer Name: Suki Chen and Jin Zhang
 	
 	<!-- jz Link to other pages on the website and classify the links to have the class attribute center -->
 	<div class="navbar"> 
-		<a href= index.html" class="item1"> HOME </a>
+		<a href= "index.html" class="item1"> HOME </a>
 		<a href="about.html" class="item1"> ABOUT </a>
-		<a href="ballpoint.html" class="item1"> GEL </a>
+		<a href="gel.html" class="item1"> GEL </a>
 		<a href="fountain.html" class="item1"> FOUNTAIN </a>
 		<a href="ink.html" class="item1"> INK </a>
 		<a href="citations.html" class="item1"> CITATIONS </a>
@@ -51,7 +51,7 @@ Programmer Name: Suki Chen and Jin Zhang
 
 <!-- sc Create section of page for inputting user information and choosing options from a list -->
 <div class = "fountain">
-	<form name = "form1">
+	<form id = "form1">
 		<h2>Fountain Pens</h2>  
 		<!-- sc Step 1: section to choose brand -->	
 		<h4> Select the brand of pen </h4>
@@ -65,18 +65,21 @@ Programmer Name: Suki Chen and Jin Zhang
 		<h4> Select what color you would like your pen to be  </h4>
 		<div class = "selectColor">
 			<div class="itemColor">
-			<input name="colors" type="checkbox" value="red">Red &nbsp;
-			<input name="colors" type="checkbox" value="Orange">Orange &nbsp; 
-			<input name="colors" type="checkbox" value="Yellow">Yellow &nbsp;
-			<input name="colors" type="checkbox" value="Green">Green &nbsp;
-			<input name="colors" type="checkbox" value="blue">Blue &nbsp;
-			<input name="colors" type="checkbox" value="Purple">Purple &nbsp;
-			<input name="colors" type="checkbox" value="Pink">Pink &nbsp;
-			<input name="colors" type="checkbox" value="clear">Clear &nbsp;
-			<input name="colors" type="checkbox" value="white">White &nbsp;
-			<input name="colors" type="checkbox" value="gray">Gray &nbsp;
-			<input name="colors" type="checkbox" value="brown">Brown &nbsp;
-			<input name="colors" type="checkbox" value="black">Black &nbsp;
+				<input name="colors" type="checkbox" value="red">Red &nbsp;
+				<input name="colors" type="checkbox" value="Orange">Orange &nbsp; 
+				<input name="colors" type="checkbox" value="Yellow">Yellow &nbsp;
+				<input name="colors" type="checkbox" value="Green">Green &nbsp;
+				<input name="colors" type="checkbox" value="blue">Blue &nbsp;
+				<input name="colors" type="checkbox" value="Purple">Purple &nbsp;
+			</div>
+			<br>
+			<div class="itemColor">
+				<input name="colors" type="checkbox" value="pink">Pink &nbsp;
+				<input name="colors" type="checkbox" value="clear">Clear &nbsp;
+				<input name="colors" type="checkbox" value="white">White &nbsp;
+				<input name="colors" type="checkbox" value="gray">Gray &nbsp;
+				<input name="colors" type="checkbox" value="brown">Brown &nbsp;
+				<input name="colors" type="checkbox" value="black">Black &nbsp;
 			</div>
 		</div>
 
@@ -91,7 +94,7 @@ Programmer Name: Suki Chen and Jin Zhang
 
 	</form>
 	
-	<form name = "form2">
+	<form id = "form2">
 		<!-- sc Step 4: section to enter contact information -->	
 		<h4> Contact and Mailing Information </h4>
 		<div class = "contact">
