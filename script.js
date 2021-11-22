@@ -3,7 +3,7 @@
 =========================================================================================
 Project Name: No Ink No Pen Site Script
 Project Description: Create Script for No Ink No Pen Website
-Date: 11/7/2021
+Date: 11/21/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 */
@@ -57,6 +57,14 @@ function doGelSubmit() {
 	if (!phone){
 		error = error.concat("Please enter your phone number.\n");
 	}
+	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
+	if (phone && !checkNumber(phone)) {
+		error = error.concat("Please enter a valid phone number.\n")
+	}
+	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
+	if (email && !checkEmail(email)) {
+		error = error.concat("Please enter a valid email.\n")
+	} 
 	if (!email){
 		error = error.concat("Please enter your email.\n");
 	}
@@ -92,9 +100,9 @@ function doGelSubmit() {
 		order = "";
 	}
 	
-
 }
 
+// jz function to check information and submit for the Fountain pen form
 function doFountainSubmit() {
 	
 	// jz assign order information to variables
@@ -142,7 +150,14 @@ function doFountainSubmit() {
 	if (!email){
 		error = error.concat("Please enter your email.\n");
 	}
-	
+	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
+	if (phone && !checkNumber(phone)) {
+		error = error.concat("Please enter a valid phone number.\n")
+	}
+	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
+	if (email && !checkEmail(email)) {
+		error = error.concat("Please enter a valid email.\n")
+	} 
 	// jz validate that there are no errors
 	if (error != ""){
 		alert(error);
@@ -173,7 +188,6 @@ function doFountainSubmit() {
 		error = "";
 		order = "";
 	}
-	
 }
 
 // jz function to on first click, clear steps 1, 2, 3 and on second click, clear step 4 information
@@ -189,3 +203,61 @@ function doClear() {
 	}
 }
 
+/*
+// sc set up function to check if the number entered is in the correct format
+function checkNumber() {
+	var phone = document.getElementsByName('phone').value;
+	var symString = "()-";
+	var numString = "1234567890"; 
+	var format1 = "ddd-ddd-dddd";
+	var format2 = "dddddddddd";
+	var format3 = "(ddd)ddddddd";
+	var format4 = "(ddd)ddd-dddd";
+	var phoneFormat = ""; 
+	
+	// sc check if the phone number entered contains only digits (0-9)
+	if (phone.length < 9) {
+		return(false);
+	}
+	else {
+		for (var i = 0; i < phone.length; i++) {
+			var c = phone.charAt(i);
+			if (numString.indexOf(c) != -1) {
+				phoneFormat += "d";
+			}
+			else if (numString.indexOf(c) == 0) {
+				phoneFormat += "(";
+			}
+			else if (numString.indexOf(c) == 1) {
+				phoneFormat += ")";
+			}
+			else if (numString.indexOf(c) == 2) {
+				phoneFormat += "-";
+			}
+			else {
+				return;
+			}
+	
+		}
+	}
+	
+	if (phoneFormat == format1 || phoneFormat == format2 || phoneFormat == format3 || phoneFormat == format4) {
+        return(true);
+    }
+
+}
+*/ 
+
+// sc set up function to check if the email is valid 
+/* function checkEmail() {
+	var email = document.getElementsByName('email').value;
+	var numString = "1234567890"; 
+	
+	if(phone.value) {
+		return (true);
+	}
+	else {
+		return false;
+	}
+}
+*/
