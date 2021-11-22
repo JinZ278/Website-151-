@@ -58,13 +58,13 @@ function doGelSubmit() {
 		error = error.concat("Please enter your phone number.\n");
 	}
 	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
-	if (phone && !checkNumber(phone)) {
+	if (phone && !checkNumber()) {
 		error = error.concat("Please enter a valid phone number.\n")
-	}
-	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
-	if (email && !checkEmail(email)) {
-		error = error.concat("Please enter a valid email.\n")
 	} 
+	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
+	if (email && !checkEmail()) {
+		error = error.concat("Please enter a valid email.\n")
+	}  
 	if (!email){
 		error = error.concat("Please enter your email.\n");
 	}
@@ -151,11 +151,11 @@ function doFountainSubmit() {
 		error = error.concat("Please enter your email.\n");
 	}
 	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
-	if (phone && !checkNumber(phone)) {
+/*	if (phone && !checkNumber(phone)) {
 		error = error.concat("Please enter a valid phone number.\n")
-	}
-	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
-	if (email && !checkEmail(email)) {
+	} */
+	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns true
+	if (email && checkEmail()) {
 		error = error.concat("Please enter a valid email.\n")
 	} 
 	// jz validate that there are no errors
@@ -203,61 +203,60 @@ function doClear() {
 	}
 }
 
-/*
-// sc set up function to check if the number entered is in the correct format
+// sc function to check if the number entered is in the correct format
 function checkNumber() {
-	var phone = document.getElementsByName('phone').value;
-	var symString = "()-";
+	var phone = document.getElementsByName('phone')[0].value;
 	var numString = "1234567890"; 
+	// sc create variables to store the acceptable formats for a phone number
 	var format1 = "ddd-ddd-dddd";
 	var format2 = "dddddddddd";
 	var format3 = "(ddd)ddddddd";
 	var format4 = "(ddd)ddd-dddd";
+	// sc create string named phoneFormat to store format
 	var phoneFormat = ""; 
 	
-	// sc check if the phone number entered contains only digits (0-9)
-	if (phone.length < 9) {
-		return(false);
+	// sc if the length of the phone number entered is less than 9 digits or more than 13 digits, then return error
+	if (phone.length < 9 || phone.length > 13) {
+		return false;
 	}
+	// sc condition for if the length of the number entered is between 9 and 13 digits, inclusive
 	else {
+		// sc for loop to check that the value entered for the phone number contains only numbers
 		for (var i = 0; i < phone.length; i++) {
 			var c = phone.charAt(i);
+			// jz if character is between 0-9, then it will add a 'd' to the phoneFormat string
 			if (numString.indexOf(c) != -1) {
 				phoneFormat += "d";
 			}
-			else if (numString.indexOf(c) == 0) {
-				phoneFormat += "(";
-			}
-			else if (numString.indexOf(c) == 1) {
-				phoneFormat += ")";
-			}
-			else if (numString.indexOf(c) == 2) {
-				phoneFormat += "-";
-			}
+			// jz else if character is not a digit, it will add it as is 
 			else {
-				return;
-			}
-	
+				phoneFormat += c;
+			}	
 		}
+		// sc if the phoneFormat string matches the acceptable formats for a phone number, then return true, else return false
+		if (phoneFormat == format1 || phoneFormat == format2 || phoneFormat == format3 || phoneFormat == format4) {
+        	return true;
+    	}
+    	else {
+    		return false;
+    	}
 	}
-	
-	if (phoneFormat == format1 || phoneFormat == format2 || phoneFormat == format3 || phoneFormat == format4) {
-        return(true);
-    }
-
 }
-*/ 
 
 // sc set up function to check if the email is valid 
-/* function checkEmail() {
-	var email = document.getElementsByName('email').value;
-	var numString = "1234567890"; 
-	
-	if(phone.value) {
-		return (true);
-	}
-	else {
+function checkEmail() {
+	// sc create variable email to store value of email entered on form
+	var email = document.getElementsByName('email')[0].value;
+	// sc create variable to store position of the @ symbol
+	var positionat = email.indexOf("@");
+	// sc create variable to store position of the period
+	var positionper = email.lastIndexOf(".");
+	// sc if position of the @ symbol is before 1, or if position of period is...
+	if (positionat<1 || positionper<positionat+2 || positionper+2>= email.length) {
 		return false;
+	}	
+	else {
+		return true;
 	}
+
 }
-*/
