@@ -57,16 +57,17 @@ function doGelSubmit() {
 	if (!phone){
 		error = error.concat("Please enter your phone number.\n");
 	}
-	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
-	if (phone && !checkNumber()) {
-		error = error.concat("Please enter a valid phone number.\n")
-	} 
-	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns false, then return the string "...valid email."
-	if (email && !checkEmail()) {
-		error = error.concat("Please enter a valid email.\n")
-	}  
 	if (!email){
 		error = error.concat("Please enter your email.\n");
+	}
+	
+	// sc if phone exists and it doesn't pass the checkNumber() function, an error message is added
+	if (phone && !checkNumber()) {
+		error = error.concat("Please enter a valid phone number.\n");
+	}
+	// sc if email exists and it doesn't pass the checkEmail() function, an error message is added
+	if (email && !checkEmail()) {
+		error = error.concat("Please enter a valid email.\n");
 	}
 	
 	// jz validate that there are no errors
@@ -87,6 +88,7 @@ function doGelSubmit() {
 		}
 		order = order.concat("\n");
 		
+		// jz returning order summary
 		order = order.concat("Tip Size: " + tip[0].value + "\n");
 		order = order.concat("Name: " + name + "\n");
 		order = order.concat("Address: " + address + "\n");
@@ -95,7 +97,7 @@ function doGelSubmit() {
 		order = order.concat("Zip: " + zip + "\n");
 		order = order.concat("Phone: " + phone + "\n");
 		order = order.concat("Email: " + email + "\n");
-		alert(order)
+		alert(order);
 		error = "";
 		order = "";
 	}
@@ -150,14 +152,16 @@ function doFountainSubmit() {
 	if (!email){
 		error = error.concat("Please enter your email.\n");
 	}
-	// sc validate phone number using check number function - if a value is entered for phone and the checkNum function returns false, then return the string "...valid phone number."
-/*	if (phone && !checkNumber(phone)) {
-		error = error.concat("Please enter a valid phone number.\n")
-	} */
-	// sc validate email using check number function - if a value is entered for the email and the checkEmail function returns true
-	if (email && checkEmail()) {
-		error = error.concat("Please enter a valid email.\n")
-	} 
+	
+	// sc if phone exists and it doesn't pass the checkNumber() function, an error message is added
+	if (phone && !checkNumber()) {
+		error = error.concat("Please enter a valid phone number.\n");
+	}
+	// sc if email exists and it doesn't pass the checkEmail() function, an error message is added
+	if (email && !checkEmail()) {
+		error = error.concat("Please enter a valid email.\n");
+	}
+	
 	// jz validate that there are no errors
 	if (error != ""){
 		alert(error);
@@ -176,6 +180,7 @@ function doFountainSubmit() {
 		}
 		order = order.concat("\n");
 		
+		// jz returning order summary
 		order = order.concat("Nib type: " + nib[0].value + "\n");
 		order = order.concat("Name: " + name + "\n");
 		order = order.concat("Address: " + address + "\n");
@@ -207,11 +212,13 @@ function doClear() {
 function checkNumber() {
 	var phone = document.getElementsByName('phone')[0].value;
 	var numString = "1234567890"; 
+	
 	// sc create variables to store the acceptable formats for a phone number
 	var format1 = "ddd-ddd-dddd";
 	var format2 = "dddddddddd";
 	var format3 = "(ddd)ddddddd";
 	var format4 = "(ddd)ddd-dddd";
+	
 	// sc create string named phoneFormat to store format
 	var phoneFormat = ""; 
 	
@@ -219,11 +226,14 @@ function checkNumber() {
 	if (phone.length < 9 || phone.length > 13) {
 		return false;
 	}
+	
 	// sc condition for if the length of the number entered is between 9 and 13 digits, inclusive
 	else {
-		// sc for loop to check that the value entered for the phone number contains only numbers
+		
+		// jz for loop that makes a dummy string where any number 0-9 is represented by d
 		for (var i = 0; i < phone.length; i++) {
 			var c = phone.charAt(i);
+			
 			// jz if character is between 0-9, then it will add a 'd' to the phoneFormat string
 			if (numString.indexOf(c) != -1) {
 				phoneFormat += "d";
@@ -233,6 +243,7 @@ function checkNumber() {
 				phoneFormat += c;
 			}	
 		}
+		
 		// sc if the phoneFormat string matches the acceptable formats for a phone number, then return true, else return false
 		if (phoneFormat == format1 || phoneFormat == format2 || phoneFormat == format3 || phoneFormat == format4) {
         	return true;
@@ -247,16 +258,19 @@ function checkNumber() {
 function checkEmail() {
 	// sc create variable email to store value of email entered on form
 	var email = document.getElementsByName('email')[0].value;
-	// sc create variable to store position of the @ symbol
+	
+	// sc create variable to store position of the @ symbol and period
 	var positionat = email.indexOf("@");
-	// sc create variable to store position of the period
 	var positionper = email.lastIndexOf(".");
-	// sc if position of the @ symbol is before 1, or if position of period is...
+	
+	// sc checks that @ symbol is not in first last position
+	// sc checks that period position is after @ symbol by at least 2 spaces
+	// sc checks that there is at least two letters after the period
 	if (positionat<1 || positionper<positionat+2 || positionper+2>= email.length) {
 		return false;
 	}	
 	else {
 		return true;
 	}
-
 }
+
