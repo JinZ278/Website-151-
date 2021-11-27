@@ -3,7 +3,7 @@
 =========================================================================================
 Project Name: No Ink No Pen Site Script
 Project Description: Create Script for No Ink No Pen Website
-Date: 11/21/2021
+Date: 11/27/2021
 Programmer Name: Suki Chen and Jin Zhang
 =========================================================================================
 */
@@ -63,11 +63,11 @@ function doGelSubmit() {
 	
 	// sc if phone exists and it doesn't pass the checkNumber() function, an error message is added
 	if (phone && !checkNumber()) {
-		error = error.concat("Please enter a valid phone number.\n");
+		error = error.concat(phone + " is not valid. Please enter a valid phone number.\n");
 	}
 	// sc if email exists and it doesn't pass the checkEmail() function, an error message is added
 	if (email && !checkEmail()) {
-		error = error.concat("Please enter a valid email.\n");
+		error = error.concat(email + " is not valid. Please enter a valid email.\n");
 	}
 	
 	// jz validate that there are no errors
@@ -155,11 +155,11 @@ function doFountainSubmit() {
 	
 	// sc if phone exists and it doesn't pass the checkNumber() function, an error message is added
 	if (phone && !checkNumber()) {
-		error = error.concat("Please enter a valid phone number.\n");
+		error = error.concat(phone + " is not valid. Please enter a valid phone number.\n");
 	}
 	// sc if email exists and it doesn't pass the checkEmail() function, an error message is added
 	if (email && !checkEmail()) {
-		error = error.concat("Please enter a valid email.\n");
+		error = error.concat(email + " is not valid. Please enter a valid email.\n");
 	}
 	
 	// jz validate that there are no errors
